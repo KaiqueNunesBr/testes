@@ -1,24 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu interativo</title>
+    <!--
     <link rel="stylesheet" href="css/menu.css">
+    -->
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+header {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: relative;
+    display: block;
+}
+
+.nav-menu li {
+    display: inline-block;
+    background-color: #333;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li:hover > a {
+    background-color: #555;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    border-top: 3px solid #777;
+}
+
+.nav-menu li:hover > .sub-menu {
+            display: block;
+}
+
+ .sub-menu li {
+    display: block;
+}
+
+.has-submenu:hover > .sub-menu {
+    left: auto;
+}
+    </style>
 </head>
 <body>
+    <header>
+        <div>
+            <h1>Kaique Nunes</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-menu">
+            <li><a href="#">início</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+            <li class="has-submenu">
+                <a href="#">Services</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a>
-            <ul>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Graphic Design</a></li>
-                <li><a href="#">SEO</a></li>
-            </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>

@@ -1,10 +1,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+header {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
 
-ul {
+header ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -13,12 +21,12 @@ ul {
     display: block;
 }
 
-ul li {
+li#navOpc {
     display: inline-block;
     background-color: #333;
 }
 
-ul li a {
+li#navOpc a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
@@ -26,11 +34,11 @@ ul li a {
     transition: background-color 0.3s;
 }
 
-ul li:hover > a {
+li#navOpc:hover > a {
     background-color: #555;
 }
 
-ul ul {
+ul#subMenu {
     display: none;
     position: absolute;
     top: 100%;
@@ -39,14 +47,14 @@ ul ul {
     border-top: 3px solid #777;
 }
 
-ul li:hover > ul {
+li#navOpc:hover > ul {
     display: block;
 }
 
-ul ul li {
+ ul#subMenu li#navOpc {
     display: block;
 }
 
-ul li:hover > ul {
+li#navOpc:hover > ul#subMenu {
     left: auto;
 }
