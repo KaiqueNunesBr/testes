@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Apresentação</title>
-    <!-- Link para o arquivo CSS 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-query.css">-->
-    <link rel="stylesheet" href="css/nav.css">
+    <title>Teste de menu</title>
+    <link rel="stylesheet" href="css/apresentacao.css">
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header>
+        <h1>
+            Kaique Nunes
+        </h1>
         <nav>
-            <label class="logo">Menu</label>
             <ul>
-              <li><a class="active" href="#">Home</a></li>
-              <li><a href="#">Languages <i class="fas fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="#">Python</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                  <li><a href="#">Others</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Web Design<i class="fas fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="#">Front End</a></li>
-                  <li><a href="#">Back End</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">Status</a></li>
-              <li><a href="#">Contact</a></li>
+                <li><a href="menu002.html">Início</a></li>
+                <li><a href="#apresentacao">Apresentação</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
-          </nav>          
+        </nav>
     </header>
-
-    <!-- Conteúdo Principal -->
     <main>
-        <!-- Seção Início -->
-        <section>
-            <h1>Francisco Kaique Nunes Barbosa</h1>
+        <section id="apresentacao">
+            <h2>Francisco Kaique Nunes Barbosa</h2>
             <p>sempre em busca de aprendizado contínuo e crescimento profissional.</p>
         </section>
-
-        <!-- Seção Sobre Mim -->
-        <section>
+        <section id="sobre-mim">
             <h2>Sobre Mim</h2>
             <ul>
                 <li>Bacharel em Ciência da Computação formado na Universidade Estadual do Sudoeste da Bahia.</li>
@@ -55,10 +34,8 @@
                 <li>Interessado em explorar novas tecnologias e participar de projetos desafiadores.</li>
             </ul>
         </section>
-
-        <!-- Seção Projetos -->
-        <section>
-            <h2>Projetos</h2>
+        <section id="projetos">
+            <h2>Meus projetos</h2>
             <ul>
                 <li><a href="https://kaiquenunesbr.github.io/projeto-petlife/">PetLife</a></li>
                 <li><a href="https://kaiquenunesbr.github.io/projeto-login/">Login</a></li>
@@ -66,29 +43,22 @@
                 <li><a href="https://kaiquenunesbr.github.io/projeto-cordel/">Cordel</a></li>
             </ul>
         </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div>
+                <h3>Contato</h3>
+                    <nav>
+                        <a href="https://github.com/KaiqueNunesBr" target="_blank">github</a>
+                        <a href="mailto:kaique49nunes@gmail.com" target="_blank">Email</a>
+                        <a href="https://www.linkedin.com/in/kaique-nunes-02311a2a3" target="_blank">LinkedIn</a>
+                    </nav>
+            </div>
+        </section>
+        
     </main>
-
-    <!-- Rodapé -->
     <footer>
-        <div>
-            <strong class="titulo">Links rápidos</strong>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#sobreMim">Sobre Mim</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
-        <div>
-            <h3>Contato</h3>
-                <nav>
-                    <a href="https://github.com/KaiqueNunesBr" target="_blank">github</a>
-                    <a href="mailto:kaique49nunes@gmail.com" target="_blank">Email</a>
-                    <a href="https://www.linkedin.com/in/kaique-nunes-02311a2a3" target="_blank">LinkedIn</a>
-                </nav>
-        </div>
-        <!-- Direitos Autorais -->
         <p>&copy; 2023 Kaique Nunes. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/apresentacao.js"></script>
 </body>
 </html>
